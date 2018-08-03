@@ -24,7 +24,7 @@ ReactDOM.render(
 
   title,
 
-  document.getElementById("react-container");
+  document.getElementById("react-container")
 
 
 );
