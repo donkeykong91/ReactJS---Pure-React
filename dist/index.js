@@ -1,4 +1,7 @@
-const title = React.createElement(
+const { createElement } = React;
+const { render } = ReactDOM;
+
+const title = createElement(
 
 
   "h1",
@@ -19,7 +22,7 @@ const title = React.createElement(
 );
 
 
-ReactDOM.render(
+  render(
 
 
   title,
