@@ -22,3 +22,26 @@ export const hello = {
   </h1>
 
 }
+
+
+export const goodtbye = {
+
+  <h1 id="title" className="header" style={
+
+    {
+
+
+      backgroundColor: "yellow",
+
+      color: "purple"
+
+
+    }
+
+  }
+
+  {text.goodbye};
+
+</h1>
+
+}
