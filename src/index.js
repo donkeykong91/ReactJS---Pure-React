@@ -1,19 +1,6 @@
 const { render } = ReactDOM;
 
 
-const style = {
-
-
-  backgroundColor: "orange",
-
-  color: "white",
-
-  fontFamily: "verdana"
-
-
-};
-
-
 render(
 
 
