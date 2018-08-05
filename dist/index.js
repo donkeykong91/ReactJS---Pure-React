@@ -16,35 +16,16 @@ const style = {
 };
 
 
-const title = createElement(
+render(
 
 
-  "h1",
+  <h1 id="title" className="header" style={style}>
 
-  {
+    Hello World
 
+  </h1>,
 
-    id: "title",
-
-    className: "header",
-
-    style: style
-
-
-  },
-
-  "Hello World"
-
-
-);
-
-
-  render(
-
-
-    title,
-
-    document.getElementById("react-container")
+  document.getElementById("react-container")
 
 
 );
