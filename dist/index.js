@@ -1,5 +1,20 @@
 const { createElement } = React;
+
 const { render } = ReactDOM;
+
+
+const style = {
+
+
+  backgroundColor: "orange",
+
+  color: "white",
+
+  fontFamily: "verdana"
+
+
+};
+
 
 const title = createElement(
 
@@ -11,7 +26,9 @@ const title = createElement(
 
     id: "title",
 
-    className: "header"
+    className: "header",
+
+    style: style
 
 
   },
@@ -25,9 +42,9 @@ const title = createElement(
   render(
 
 
-  title,
+    title,
 
-  document.getElementById("react-container")
+    document.getElementById("react-container")
 
 
 );
