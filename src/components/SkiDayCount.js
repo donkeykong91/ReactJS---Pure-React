@@ -1,6 +1,10 @@
-import { Component } from "react";
-
 import "../stylesheets/ui.scss";
+
+import { MdTerrain } from "react-icons/md";
+
+import { TiWeatherSnow } from "react-icons/ti";
+
+import { FaCalendarAlt } from "react-icons/fa";
 
 
 const percentToDecimal = function (decimal) {
@@ -17,7 +21,7 @@ const calcGoalProgress = function (total, goal) {
 };
 
 
-export const SkiDayCount = function (props) {
+export const SkiDayCount = function ( { total, powder, backcountry, goal } = {} ) {
 
   return (
 
@@ -32,9 +36,11 @@ export const SkiDayCount = function (props) {
 
                   <span>
 
-                    {props.total}
+                    {total}
 
                   </span>
+
+                  <FaCalendarAlt />
 
                   <span>
 
@@ -51,9 +57,11 @@ export const SkiDayCount = function (props) {
 
                   <span>
 
-                    {props.powder}
+                    {powder}
 
                   </span>
+
+                  <TiWeatherSnow />
 
                   <span>
 
@@ -70,9 +78,11 @@ export const SkiDayCount = function (props) {
 
                   <span>
 
-                    {props.backcountry}
+                    {backcountry}
 
                   </span>
+
+                  <MdTerrain />
 
                   <span>
 
@@ -88,7 +98,7 @@ export const SkiDayCount = function (props) {
 
                   <span>
 
-                    {calcGoalProgress(props.total, props.goal)}
+                    {calcGoalProgress(total, goal)}
 
                   </span>
 
