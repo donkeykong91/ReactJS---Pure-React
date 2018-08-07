@@ -4,77 +4,88 @@ import { TiWeatherSnow } from "react-icons/ti";
 
 import { FaCalendarAlt } from "react-icons/fa";
 
-import { SkiDayRow } = from "./SkiDayRow";
+import { SkiDayRow } from "./SkiDayRow";
 
 
 export const SkiDayList = function ({days}) {
 
-  <table>
-
-    <thead>
-
-      <tr>
+  return (
 
 
-        <th>
+    <table>
 
-          Date
+      <thead>
 
-        </th>
-
-        <th>
-
-          Resort
-
-        </th>
-
-        <th>
-
-          Powder
-
-        </th>
-
-        <th>
-
-          Backcountry
-
-        </th>
+        <tr>
 
 
-      </tr>
+          <th>
 
-    </thead>
+            Date
 
-    <tbody>
+          </th>
 
-      {days.map( function (day, index) {
+          <th>
 
-                  return (
+            Resort
 
-                    <SkiDayRow
+          </th>
 
-                      key={index}
+          <th>
 
-                      resort={day.resort}
+            Powder
 
-                      date={day.date}
+          </th>
 
-                      powder={day.powder}
+          <th>
 
-                      backcountry={day.backcountry}
+            Backcountry
 
-                    />
+          </th>
 
-                  );
 
-              }
+        </tr>
 
-          );
+      </thead>
 
-      }
+      <tbody>
 
-    </tbody>
+        {days.map( function (day, index) {
 
-  </table>
+
+                    return (
+
+
+                      <SkiDayRow
+
+
+                        key={index}
+
+                        resort={day.resort}
+
+                        date={day.date}
+
+                        powder={day.powder}
+
+                        backcountry={day.backcountry}
+
+
+                      />
+
+
+                    );
+
+                }
+
+            )
+
+        }
+
+      </tbody>
+
+    </table>
+
+
+  );
 
 }
