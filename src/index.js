@@ -2,7 +2,7 @@ import React from "react";
 
 import { render } from "react-dom";
 
-import { SkiDayCount } from "./components/SkiDayList";
+import { SkiDayList } from "./components/SkiDayList";
 
 
 window.React = React;
