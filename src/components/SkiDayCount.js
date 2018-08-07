@@ -19,89 +19,87 @@ const calcGoalProgress = function (total, goal) {
 
 export const SkiDayCount = function (props) {
 
-  return
+  return (
 
-    (
-
-      (
+            (
 
 
-        <div className="ski-day-count">
+              <div className="ski-day-count">
 
 
-          <div className="total-days">
+                <div className="total-days">
 
 
-            <span>
+                  <span>
 
-              {props.total}
+                    {props.total}
 
-            </span>
+                  </span>
 
-            <span>
+                  <span>
 
-              days
+                    days
 
-            </span>
-
-
-          </div>
+                  </span>
 
 
-          <div className="powder-days">
+                </div>
 
 
-            <span>
-
-              {props.powder}
-
-            </span>
-
-            <span>
-
-              days
-
-            </span>
+                <div className="powder-days">
 
 
-          </div>
+                  <span>
+
+                    {props.powder}
+
+                  </span>
+
+                  <span>
+
+                    days
+
+                  </span>
 
 
-          <div className="backcountry-days">
+                </div>
 
 
-            <span>
-
-              {props.backcountry}
-
-            </span>
-
-            <span>
-
-              days
-
-            </span>
+                <div className="backcountry-days">
 
 
-          </div>
+                  <span>
+
+                    {props.backcountry}
+
+                  </span>
+
+                  <span>
+
+                    days
+
+                  </span>
 
 
-          <div>
-
-            <span>
-
-              {calcGoalProgress(props.total, props.goal)}
-
-            </span>
-
-          </div>
+                </div>
 
 
-        </div>
+                <div>
+
+                  <span>
+
+                    {calcGoalProgress(props.total, props.goal)}
+
+                  </span>
+
+                </div>
 
 
-      )
+              </div>
 
-    );
+
+            )
+
+  );
 
 };
