@@ -3,102 +3,94 @@ import { Component } from "react";
 import "../stylesheets/ui.scss";
 
 
-export class SkiDayCount extends Component {
+const percentToDecimal = function (decimal) {
+
+  return ((decimal * 100) + "%");
+
+}
 
 
-  percentToDecimal(decimal) {
+const calcGoalProgress = function (total, goal) {
 
-    return ((decimal * 100) + "%");
+  return percentToDecimal(total/goal);
 
-  }
-
-
-  calcGoalProgress(total, goal) {
-
-    return this.percentToDecimal(total/goal);
-
-  }
+}
 
 
-  render() {
-
-    return (
-
-      <div className="ski-day-count">
+export SkiDayCount function (props) {
 
 
-        <div className="total-days">
+  <div className="ski-day-count">
 
 
-          <span>
-
-            {this.props.total}
-
-          </span>
-
-          <span>
-
-            days
-
-          </span>
+    <div className="total-days">
 
 
-        </div>
+      <span>
+
+        {props.total}
+
+      </span>
+
+      <span>
+
+        days
+
+      </span>
 
 
-        <div className="powder-days">
+    </div>
 
 
-          <span>
-
-            {this.props.powder}
-
-          </span>
-
-          <span>
-
-            days
-
-          </span>
+    <div className="powder-days">
 
 
-        </div>
+      <span>
+
+        {props.powder}
+
+      </span>
+
+      <span>
+
+        days
+
+      </span>
 
 
-        <div className="backcountry-days">
+    </div>
 
 
-          <span>
-
-            {this.props.backcountry}
-
-          </span>
-
-          <span>
-
-            days
-
-          </span>
+    <div className="backcountry-days">
 
 
-        </div>
+      <span>
+
+        {props.backcountry}
+
+      </span>
+
+      <span>
+
+        days
+
+      </span>
 
 
-        <div>
-
-          <span>
-
-            {this.calcGoalProgress( this.props.total, this.props.goal )}
-
-          </span>
-
-        </div>
+    </div>
 
 
-      </div>
+    <div>
 
-    );
+      <span>
 
-  }
+        {calcGoalProgress(props.total, props.goal)}
 
-};
+      </span>
+
+    </div>
+
+
+  </div>
+
+);
