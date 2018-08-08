@@ -61,13 +61,7 @@ export const SkiDayList = function ({days}) {
 
                         key={index}
 
-                        resort={day.resort}
-
-                        date={day.date}
-
-                        powder={day.powder}
-
-                        backcountry={day.backcountry}
+                        {...day}
 
 
                       />
