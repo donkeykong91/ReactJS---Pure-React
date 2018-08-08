@@ -6,6 +6,8 @@ import { TiWeatherSnow } from "react-icons/ti";
 
 import { FaCalendarAlt } from "react-icons/fa";
 
+import { PropTypes } from "react";
+
 
 const percentToDecimal = function (decimal) {
 
@@ -21,7 +23,13 @@ const calcGoalProgress = function (total, goal) {
 };
 
 
-export const SkiDayCount = function ( { total, powder, backcountry, goal } = {} ) {
+export const SkiDayCount = function ( { total=70,
+
+                                        powder=20,
+
+                                        backcountry=10,
+
+                                        goal=100 } = {} ) {
 
   return (
 
@@ -113,3 +121,18 @@ export const SkiDayCount = function ( { total, powder, backcountry, goal } = {} 
   );
 
 };
+
+
+
+SkiDayCount.propTypes = {
+
+
+  total: PropTypes.number,
+
+  powder: PropTypes.number,
+
+  backcountry: PropTypes.number,
+
+  goal: PropTypes.number
+
+}
