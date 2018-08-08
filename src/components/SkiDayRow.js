@@ -4,6 +4,8 @@ import { TiWeatherSnow } from "react-icons/ti";
 
 import { FaCalendarAlt } from "react-icons/fa";
 
+import { PropTypes } from "react";
+
 
 export const SkiDayRow = function ({resort, date, powder, backcountry }) {
 
@@ -42,3 +44,18 @@ export const SkiDayRow = function ({resort, date, powder, backcountry }) {
   );
 
 };
+
+
+SkiDayRow.propTypes = {
+
+
+  resort: PropTypes.string.isRequired,
+
+  date: PropTypes.instanceOf(Date).isRequired,
+
+  powder: PropTypes.bool,
+
+  backcountry: PropTypes.bool
+
+
+}
