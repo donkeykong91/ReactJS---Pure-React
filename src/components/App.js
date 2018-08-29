@@ -88,11 +88,19 @@ export const App = createClass({
 
         <SkiDayCount
 
-          total={}
+          total={this.countDays()}
 
-          powder={}
+          powder={this.countDays(
 
-          backcountry={}
+            "powder"
+
+          )}
+
+          backcountry={this.countDays(
+
+            "backcountry"
+
+          )}
 
         />
 
