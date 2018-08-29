@@ -60,19 +60,23 @@ export const App = createClass({
 
   countDays(filter) {
 
-    return this.state.allSkiDays.filter(function (day) {
+    {const { allSkiDays } = this.state;
 
-      if(filter) {
+      return allSkiDays.filter(function (day) {
 
-        return day[filter];
+        if(filter) {
 
-      } else {
+          return day[filter];
 
-        return day;
+        } else {
 
-      }
+          return day;
 
-    }).length;
+        }
+
+      }).length;
+
+    }
 
   },
 
