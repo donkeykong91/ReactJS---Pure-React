@@ -11,7 +11,20 @@ import { PropTypes } from "react";
 import { Link } from "react-router";
 
 
-export const SkiDayList = function ({days}) {
+export const SkiDayList = function ({days, filter}) {
+
+  const filterDays = (!filter ||
+
+  !filter.match(/powder|backcountry/)) ?
+
+  days:
+
+  days.filter(function (day) {
+
+    day[filter];
+
+  });
+
 
   return (
 
