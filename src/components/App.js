@@ -6,6 +6,8 @@ import { SkiDayCount } from "./SkiDayCount";
 
 import { AddDayForm } from "./AddDayForm";
 
+import { Menu } from "./Menu";
+
 
 export class App extends Component{
 
@@ -90,6 +92,8 @@ export class App extends Component{
     return (
 
       <div className="app">
+
+      <Menu />
 
         {
 
