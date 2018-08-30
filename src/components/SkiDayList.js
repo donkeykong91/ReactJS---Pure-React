@@ -8,13 +8,16 @@ import { SkiDayRow } from "./SkiDayRow";
 
 import { PropTypes } from "react";
 
+import { Link } from "react-router";
+
 
 export const SkiDayList = function ({days}) {
 
   return (
 
+    <div className="ski-day-list">
 
-    <table>
+      <table>
 
       <thead>
 
@@ -45,6 +48,34 @@ export const SkiDayList = function ({days}) {
 
           </th>
 
+
+        </tr>
+
+        <tr>
+
+          <td colSpan={4}>
+
+
+            <Link to="/list-days">
+
+              All Days
+
+            </Link>
+
+            <Link to="/list-days/powder">
+
+              Powder Days
+
+            </Link>
+
+            <Link to="/list-days/backcountry">
+
+              Backcountry Days
+
+            </Link>
+
+
+          </td>
 
         </tr>
 
@@ -79,8 +110,9 @@ export const SkiDayList = function ({days}) {
 
       </tbody>
 
-    </table>
+      </table>
 
+    </div>
 
   );
 
