@@ -123,7 +123,13 @@ export class App extends Component{
           <AddDayForm /> :
 
 
-          <SkiDayList days={this.state.allSkiDays}/>
+          <SkiDayList
+
+            days={this.state.allSkiDays}
+
+            filter={this.props.params.filter}
+
+          />
 
         }
 
