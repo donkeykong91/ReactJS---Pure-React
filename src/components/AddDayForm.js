@@ -1,16 +1,28 @@
-import { PropTypes } from "react";
+import { PropTypes, Component } from "react";
 
-export const AddDayForm = function () {
+export class AddDayForm extends Component {
 
-  return (
+  render() {
 
-    <h1>
+    return (
 
-      Add a Day
+      <form className="add-day-form">
 
-    </h1>
 
-  );
+        <input id="resort" type="text" required/>
+
+        <input id="date" type="date" required/>
+
+        <input id="powder" type="checkbox" required/>
+
+        <input id="backcountry" type="checkbox" required/>
+
+
+      </form>
+
+    );
+
+  }
 
 }
 
