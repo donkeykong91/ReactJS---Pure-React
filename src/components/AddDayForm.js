@@ -9,13 +9,48 @@ export class AddDayForm extends Component {
       <form className="add-day-form">
 
 
+        <label htmlFor="resort">
+
+          Resort Name
+
+        </label>
+
         <input id="resort" type="text" required/>
+
+
+        <label htmlFor="date">
+
+          Date
+
+        </label>
 
         <input id="date" type="date" required/>
 
-        <input id="powder" type="checkbox" required/>
 
-        <input id="backcountry" type="checkbox" required/>
+        <div>
+
+          <input id="powder" type="checkbox" required/>
+
+          <label htmlFor="powder">
+
+            Powder Day
+
+          </label>
+
+        </div>
+
+
+        <div>
+
+          <input id="backcountry" type="checkbox" required/>
+
+          <label htmlFor="backcountry">
+
+            Backcountry Day
+
+          </label>
+
+        </div>
 
 
       </form>
