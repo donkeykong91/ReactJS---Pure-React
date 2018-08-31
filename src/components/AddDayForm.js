@@ -2,6 +2,20 @@ import { PropTypes, Component } from "react";
 
 export class AddDayForm extends Component {
 
+  submit (e) {
+
+    e.preventDefault();
+
+    console.log("resort", this.refs.resort.value);
+
+    console.log("date", this.refs.date.value);
+
+    console.log("powder", this.refs.powder.checked);
+
+    console.log("backcountry", this.refs.backcountry.checked);
+
+  }
+
   render() {
 
     const { resort, date, powder, backcountry } = this.props;
@@ -94,6 +108,11 @@ export class AddDayForm extends Component {
 
         </div>
 
+        <button>
+
+          Add Day
+
+        </button>
 
       </form>
 
