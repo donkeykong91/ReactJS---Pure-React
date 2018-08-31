@@ -13,7 +13,7 @@ import { Link } from "react-router";
 
 export const SkiDayList = function ({days, filter}) {
 
-  const filterDays = (!filter ||
+  const filteredDays = (!filter ||
 
   !filter.match(/powder|backcountry/)) ?
 
@@ -21,7 +21,7 @@ export const SkiDayList = function ({days, filter}) {
 
   days.filter(function (day) {
 
-    day[filter];
+    return day[filter];
 
   });
 
@@ -96,7 +96,7 @@ export const SkiDayList = function ({days, filter}) {
 
       <tbody>
 
-        {days.map( function (day, index) {
+        {filteredDays.map( function (day, index) {
 
 
                     return (
