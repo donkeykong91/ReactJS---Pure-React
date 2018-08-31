@@ -4,6 +4,8 @@ export class AddDayForm extends Component {
 
   render() {
 
+    const { resort, date, powder, backcountry } = this.props;
+
     return (
 
       <form className="add-day-form">
@@ -15,7 +17,17 @@ export class AddDayForm extends Component {
 
         </label>
 
-        <input id="resort" type="text" required/>
+        <input id="resort"
+
+               type="text"
+
+               required
+
+               defaultValue={resort}
+
+               ref="resort"
+
+        />
 
 
         <label htmlFor="date">
@@ -24,12 +36,32 @@ export class AddDayForm extends Component {
 
         </label>
 
-        <input id="date" type="date" required/>
+        <input id="date"
+
+               type="date"
+
+               required
+
+               defaultValue={date}
+
+               ref="date"
+
+        />
 
 
         <div>
 
-          <input id="powder" type="checkbox" required/>
+          <input id="powder"
+
+                 type="checkbox"
+
+                 required
+
+                 defaultChecked={powder}
+
+                 ref="powder"
+
+          />
 
           <label htmlFor="powder">
 
@@ -42,7 +74,17 @@ export class AddDayForm extends Component {
 
         <div>
 
-          <input id="backcountry" type="checkbox" required/>
+          <input id="backcountry"
+
+                 type="checkbox"
+
+                 required
+
+                 defaultChecked={backcountry}
+
+                 ref="backcountry"
+
+          />
 
           <label htmlFor="backcountry">
 
@@ -60,6 +102,20 @@ export class AddDayForm extends Component {
   }
 
 }
+
+
+AddDayForm.defaultProps = {
+
+  resort: "Kirkwood",
+
+  date: "2017-02-12",
+
+  powder: true,
+
+  backcountry: false
+
+}
+
 
 AddDayForm.propTypes = {
 
