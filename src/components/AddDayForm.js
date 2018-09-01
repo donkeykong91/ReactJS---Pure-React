@@ -1,28 +1,51 @@
-import { PropTypes, Component } from "react";
+import { PropTypes } from "react";
 
-export class AddDayForm extends Component {
+export const AddDayForm = function ({ resort,
 
-  submit (e) {
+                                      date,
 
-    e.preventDefault();
+                                      powder,
 
-    console.log("resort", this.refs.resort.value);
+                                      backcountry,
 
-    console.log("date", this.refs.date.value);
+                                      onNewDay} = {}) {
 
-    console.log("powder", this.refs.powder.checked);
+  {let _resort;
 
-    console.log("backcountry", this.refs.backcountry.checked);
+   let _date;
 
-  }
+   let _powder;
 
-  render() {
+   let _backcountry;
 
-    const { resort, date, powder, backcountry } = this.props;
+
+    const submit = function (e) {
+
+      e.preventDefault();
+
+      onNewDay({resort: _resort.value,
+
+                date: _date.value,
+
+                powder: _powder.checked,
+
+                backcountry: _backcountry.checked
+              });
+
+      _resort.value = "";
+
+      _date.value = "";
+
+      _powder.checked = false;
+
+      _backcountry.checked = false;
+
+    };
+
 
     return (
 
-      <form className="add-day-form">
+      <form onSubmit={submit} className="add-day-form">
 
 
         <label htmlFor="resort">
@@ -39,7 +62,13 @@ export class AddDayForm extends Component {
 
                defaultValue={resort}
 
-               ref="resort"
+               ref={function (input) {
+
+                 _resort = input;
+
+                 return _resort;
+
+               }}
 
         />
 
@@ -58,7 +87,13 @@ export class AddDayForm extends Component {
 
                defaultValue={date}
 
-               ref="date"
+               ref={function (input) {
+
+                 _date = input;
+
+                 return _date;
+
+               }}
 
         />
 
@@ -69,11 +104,15 @@ export class AddDayForm extends Component {
 
                  type="checkbox"
 
-                 required
-
                  defaultChecked={powder}
 
-                 ref="powder"
+                 ref={function (input) {
+
+                   _powder = input;
+
+                   return _powder;
+
+                 }}
 
           />
 
@@ -92,11 +131,15 @@ export class AddDayForm extends Component {
 
                  type="checkbox"
 
-                 required
-
                  defaultChecked={backcountry}
 
-                 ref="backcountry"
+                 ref={function (input) {
+
+                   _backcountry = input;
+
+                   return _backcountry;
+
+                 }}
 
           />
 
