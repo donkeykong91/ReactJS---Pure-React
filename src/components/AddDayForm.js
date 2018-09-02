@@ -34,7 +34,7 @@ class Autocomplete extends Component {
 
   }
 
-  set value() {
+  set value(inputValue) {
 
     this.refs.inputResort.value = inputValue;
 
