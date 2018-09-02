@@ -1,4 +1,80 @@
-import { PropTypes } from "react";
+import { PropTypes, Component } from "react";
+
+const tahoeResorts = [
+
+  "Alpine Meadows",
+
+  "Boreal",
+
+  "Diamond Peak",
+
+  "Donner Ski Ranch",
+
+  "Heavenly",
+
+  "Homewood",
+
+  "Kirkwood",
+
+  "Mt. Rose",
+
+  "Northstar",
+
+  "Squaw Valley",
+
+  "Sugar Bowl"
+
+];
+
+class Autocomplete extends Component {
+
+  get value() {
+
+    return this.refs.inputResort.value;
+
+  }
+
+  set value() {
+
+    this.refs.inputResort.value = inputValue;
+
+  }
+
+  render() {
+
+    return (
+
+      <div>
+
+        <input ref="inputResort" type="text" list="tahoe-resorts" />
+
+        <datalist id="tahoe-resorts">
+
+          {this.props.options.map( function (option, index) {
+
+              return (
+
+                <option key={index}>
+
+                  {option}
+
+                </option>
+
+              );
+
+            }
+
+          )}
+
+        </datalist>
+
+      </div>
+
+    );
+
+  }
+
+}
 
 export const AddDayForm = function ({ resort,
 
@@ -54,13 +130,9 @@ export const AddDayForm = function ({ resort,
 
         </label>
 
-        <input id="resort"
+        <Autocomplete
 
-               type="text"
-
-               required
-
-               defaultValue={resort}
+               options={tahoeResorts}
 
                ref={function (input) {
 
